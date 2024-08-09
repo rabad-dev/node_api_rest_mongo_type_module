@@ -1,12 +1,13 @@
 //importaciones de paquetes internos
-const express = require('express');
-const mongoose = require('mongoose');
-const bodyParser = require('body-parser');
-require('dotenv').config();
+import express from 'express';
+import mongoose from 'mongoose';
+import bodyParser from 'body-parser';
+import dotenv from 'dotenv';
 
+dotenv.config();
 
 //importaciones archivos y/o paquetes personalizados
-const bookRoutes = require('./routes/book.routes');
+import bookRoutes from './routes/book.routes.js';
 
 
 

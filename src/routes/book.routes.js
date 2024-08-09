@@ -1,7 +1,7 @@
-const express = require('express');
-const router = express.Router();
-const Book = require('../models/book.model');
+import express from 'express';
+import Book from '../models/book.model.js';
 
+const router = express.Router();
 
 //Meddleware
 
@@ -134,7 +134,7 @@ router.delete('/:id', getBook, async(req, res) => {
         await book.deleteOne({
             _id: book._id
         });
-        
+
         res.status(202).json({message: `El libro ${book.title} fue eliminado correctamente`});
 
     } catch (error) {
@@ -146,4 +146,4 @@ router.delete('/:id', getBook, async(req, res) => {
 
 
 
-module.exports = router;
+export default router;
